@@ -1,4 +1,4 @@
-# === BERACHAIN 1.2 ===
+# === BERACHAIN 1.3 ===
 
 ### Функционал бота:  
 - Получение токенов через [кран](https://bartio.faucet.berachain.com/)  
@@ -7,6 +7,7 @@
 - [Стейкинг](https://bartio.station.berachain.com/gauge) HONEY-WBERA  
 - Клейм [BGT](https://bartio.station.berachain.com/gauge)
 - Просмотр баланса BGT
+- Стейкинг ETH на [StakeStone](https://app.stakestone.io/u/vault/detail/bera?r=EB6E4)
 
 ### Параметры:  
 - Случайные задержки между действиями  
