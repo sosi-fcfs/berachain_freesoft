@@ -7,7 +7,7 @@
 - [Стейкинг](https://bartio.station.berachain.com/gauge) HONEY-WBERA  
 - Клейм [BGT](https://bartio.station.berachain.com/gauge)
 - Просмотр баланса BGT
-- Стейкинг ETH на [StakeStone](https://app.stakestone.io/u/vault/detail/bera?r=EB6E4)
+- Стейкинг ETH на [app.stakestone.io](https://app.stakestone.io/u/vault/detail/bera?r=EB6E4)
 
 ### Параметры:  
 - Случайные задержки между действиями  
