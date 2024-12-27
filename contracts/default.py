@@ -34,8 +34,9 @@ class Default:
 
     def send_transaction(self, tx, desc=""):
         try:
-            if "gas" not in tx: tx.update({"gas": hex(int(self.w3.eth.estimate_gas(tx) * 1.5))})
-            if "gasPrice" not in tx: tx.update({"gasPrice": hex(int(self.w3.eth.gas_price * 1.2))})
+            if "gas" not in tx:
+                tx.update({"gas": hex(int(self.w3.eth.estimate_gas(tx) * 1.5))})
+                tx.update({"gasPrice": hex(int(self.w3.eth.gas_price * 1.2))})
 
             signed_txn = self.w3.eth.account.sign_transaction(tx, private_key=self.private_key)
             raw_tx_hash = self.w3.eth.send_raw_transaction(signed_txn.raw_transaction)

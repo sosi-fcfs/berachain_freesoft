@@ -61,9 +61,12 @@ class Faucet:
         return False
 
     def faucet(self):
-        while True:
-            self.create_task()
-            if self.task_status():
-                break
+        try:
+            while True:
+                self.create_task()
+                if self.task_status():
+                    break
 
-        return self.get_token()
+            return self.get_token()
+        except:
+            logger.error(f"{self.acc_name} ошибка при получении токенов")

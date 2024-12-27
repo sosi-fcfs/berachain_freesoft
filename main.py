@@ -2,6 +2,8 @@ from contracts.BeraStake import BeraStake
 from contracts.BeraMultiSwap import BeraMultiSwap
 from contracts.BeraAddLiquidity import BeraAddLiquidity
 
+from contracts.BeraStakeStone import StakeStone
+
 from models.accounts import Accounts
 from contracts.faucet import Faucet
 from models.coins import Coins
@@ -51,6 +53,19 @@ def check_balances_bgt(accounts):
     for account in accounts:
         threading.Thread(target=check_balance, args=(account,)).start()
 
+def stakestone_eth(accounts):
+    for account in accounts:
+        client = StakeStone(account)
+        for i in range(10):
+            try:
+                if ref_code: client.referal(ref_code)
+                client.stake(amount_stakestone_eth)
+                time.sleep(random.randint(*delay_actions))
+                break
+            except Exception as err:
+                logger.error(f"{client.acc_name} {err}")
+                time.sleep(10)
+
 def main():
     accounts_manager = Accounts()
     accounts_manager.loads_accs()
@@ -58,18 +73,23 @@ def main():
 
     action = input("> 1. Запустить фарминг\n"
                    "> 2. Посмотреть балансы BGT\n"
+                   "> 3. Застейкать ETH StakeStone\n"
                    "> ")
+
     print("-"*50+"\n")
 
     if action == "1":
         start_farming(accounts)
     elif action == "2":
         check_balances_bgt(accounts)
+    elif action == "3":
+        stakestone_eth(accounts)
     else:
         logger.warning(f"Выбран вариант, которого нет!")
 
 if __name__ == '__main__':
     first_message()
     main()
+
 
 

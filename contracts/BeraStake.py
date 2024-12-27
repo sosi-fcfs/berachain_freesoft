@@ -1,5 +1,3 @@
-import requests
-
 from contracts.default import Default
 from utils.get_abi import get_abi
 from utils.encode import get_data_byte64

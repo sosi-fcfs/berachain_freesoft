@@ -14,3 +14,8 @@ delay_actions = [30, 60]
 # задержки между циклами, начиная от получения BERA и до клейма BTG
 delay_staking = [30000, 36000]
 
+
+# какое кол-во eth стейкать stakestone
+amount_stakestone_eth = 0.001
+ref_code = "EB6E4"
+

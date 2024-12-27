@@ -17,7 +17,6 @@ class Client:
     def __init__(self, account):
         self.coins = Coins()
         self.account = account
-
         logger.info(f"{self.account.private_key[:5]}..{self.account.private_key[-5:]} запуск бота..")
 
         self.bera_swap = BeraMultiSwap(self.account)
