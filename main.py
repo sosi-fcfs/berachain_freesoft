@@ -73,7 +73,7 @@ def main():
 
     action = input("> 1. Запустить фарминг\n"
                    "> 2. Посмотреть балансы BGT\n"
-                   "> 3. Застейкать ETH StakeStone\n"
+                   "> 3. Застейкать MAINNET ETH на StakeStone\n"
                    "> ")
 
     print("-"*50+"\n")
