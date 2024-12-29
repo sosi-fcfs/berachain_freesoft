@@ -1,6 +1,6 @@
 
 # токен для разгадывания капчи https://www.capsolver.com/
-capsolver_token = "9f2a0dfb7caf0e7e34e32d448bdcb20a"
+capsolver_token = ""
 
 # использовать прокси True/False
 useProxies = True
@@ -17,5 +17,5 @@ delay_staking = [30000, 36000]
 
 # какое кол-во eth стейкать stakestone
 amount_stakestone_eth = 0.001
-ref_code = "EB6E4"
+ref_code = "C9D72"
 
