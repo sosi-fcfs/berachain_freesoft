@@ -14,7 +14,7 @@ class Faucet:
         self.session = create_session(proxy)
 
     def create_task(self):
-        # Отправка задания на решение капчи Turnstile в 2Captcha
+        # Отправка задания на решение капчи Turnstile в 2Captcha 
         resp = requests.post("http://2captcha.com/in.php", data={
             "key": self.token,
             "method": "turnstile",  # Используем метод turnstile для Cloudflare Turnstile
