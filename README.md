@@ -1,25 +1,64 @@
-# === BERACHAIN 1.3 ===
+# BERACHAIN FREESOFT
 
-### Функционал бота:  
-- Получение токенов через [кран](https://bartio.faucet.berachain.com/)  
-- [Свап](https://bartio.bex.berachain.com/swap) BERA на HONEY и WBERA  
-- Добавление в [пулл](https://bartio.bex.berachain.com/add-liquidity/0xd28d852cbcc68dcec922f6d5c7a8185dbaa104b7)  
-- [Стейкинг](https://bartio.station.berachain.com/gauge) HONEY-WBERA  
-- Клейм [BGT](https://bartio.station.berachain.com/gauge)
-- Просмотр баланса BGT
-- Стейкинг ETH на [app.stakestone.io](https://app.stakestone.io/u/vault/detail/bera?r=EB6E4)
+## Описание
 
-### Параметры:  
-- Случайные задержки между действиями  
-- Случайные задержки между стейкингом
+**BERACHAIN FREESOFT** — это бот для автоматизации взаимодействия с блокчейном Berachain. Он позволяет выполнять следующие действия:
 
-### Установка:  
-- Устанавливаете `python 3.11.9`  
-- Запускаете файл `setup.bat`
+- Получать токены через [faucet Berachain](https://bartio.faucet.berachain.com/)
+- Выполнять [swap on BEX](https://bartio.bex.berachain.com/swap) токенов BERA на HONEY и WBERA
+- Добавлять ликвидность в [BEX liquidity pool](https://bartio.bex.berachain.com/add-liquidity/0xd28d852cbcc68dcec922f6d5c7a8185dbaa104b7)
+- Участвовать в [стейкинге station berachain](https://bartio.station.berachain.com/gauge) HONEY-WBERA
+- Клеймить [BGT на station berachain](https://bartio.station.berachain.com/gauge)
+- Просматривать баланс токенов BGT
+- Стейкать MAINNET ETH на [StakeStone](https://app.stakestone.io/u/vault/detail/bera?r=EB6E4)
 
-### Запуск:  
-- В файле `data>private_keys.txt` указываете приватные ключи.  
-- В файле `data>proxies.txt` указываете прокси. Первый ключ соответствует первому прокси в списке, второй к второму и тд. Если ключей больше чем прокси, то прокси пойдут по кругу.  
-- Запускать бота файлом `start.bat`  
+## Возможности бота
 
-[![Telegram](https://img.shields.io/badge/-Telegram-090909?style=for-the-badge&logo=telegram&logoColor=27A0D9&color=02223b)](https://t.me/next_softs)
+- Случайные задержки между действиями для имитации реальной активности
+- Случайные задержки между действиями по стейкингу
+- Поддержка работы с прокси для анонимности
+
+## Установка и настройка
+
+### Для Windows
+
+1. **Установка Python**  
+   Убедитесь, что у вас установлен Python версии 3.11.9 или выше. Вы можете скачать его с официального сайта:  
+   [Python Downloads](https://www.python.org/downloads/)
+
+2. **Установка зависимостей**  
+   Для установки необходимых библиотек откройте командную строку и выполните команду:
+
+   `pip install -r requirements.txt`
+
+3.	Настройка
+	•	В файле data/private_keys.txt укажите приватные ключи ваших кошельков (по одному ключу на строку).
+	•	В файле data/proxies.txt укажите прокси-серверы (по одному на строку). Прокси будут распределяться по ключам в цикличном порядке.
+	4.	Запуск
+Для запуска бота используйте файл start.bat. Он автоматически запустит все необходимые процессы.
+
+Для MacOS
+	1.	Установка Python
+Убедитесь, что у вас установлен Python версии 3.11.9 или выше. Вы можете установить Python через Homebrew, выполнив команду:
+
+brew install python@3.11
+
+  2.	Установка зависимостей
+Откройте терминал и выполните команду:
+
+`pip3 install -r requirements.txt`
+
+
+3.	Настройка
+	•	В файле data/private_keys.txt укажите приватные ключи ваших кошельков (по одному ключу на строку).
+	•	В файле data/proxies.txt укажите прокси-серверы (по одному на строку). Прокси будут распределяться по ключам в цикличном порядке.
+	4.	Запуск
+Для запуска бота используйте команду в терминале:
+
+`python3 main.py`
+
+
+
+Примечания
+	•	Для корректной работы бота, убедитесь, что ваши приватные ключи и прокси правильно указаны.
+	•	В случае ошибок при запуске, проверьте настройки прокси и наличие необходимых зависимостей.
